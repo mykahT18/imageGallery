@@ -1,0 +1,18 @@
+@mixin screen($myScreen) {
+
+    @if $myScreen == "med"{
+
+        @media only screen and (min-width: 600px)  { @content;} 
+
+    } 
+    @else if $myScreen == "large"{
+
+        @media only screen and (min-width: 768px) { @content; } 
+    }
+    @else if $myScreen == "Xlarge"{
+
+        @media only screen and (min-width: 1000px) { @content; } 
+    }
+
+   
+}

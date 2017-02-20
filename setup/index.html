@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-	<img src="globe.svg">
+	<img class="globe" src="globe.svg">
 	<h1>Travel</h1>
 	<p>"I haven't been everywhere, but it's on my list." -Susan Sontag</p>
 </header>
@@ -16,34 +16,110 @@
 <section class="images-container">
 	<ul class="image-list">
 		<li>
-			<img src="images/mountains-clouds.jpg" alt="Mountain View">
+			<img src="images/mountains-clouds.jpg"
+			 srcset="images/mountains-clouds-300.jpg 300w,
+             images/mountains-clouds-600.jpg 600w,
+             images/mountains-clouds-800.jpg 800w"
+			 alt="Mountain View">
 			<ul class="picTitle">
 				<li><h3>Name</h3></li>
 				<li><p>location, location</p></li>
 			</ul>
 		</li>
 		<li>
-			<img src="images/bridge-in-germany.jpg" alt="A bridge in Germany">
+			<img src="images/bridge-in-germany.jpg" 
+			srcset="images/bridge-in-germany-300.jpg 300w,
+             images/bridge-in-germany-600.jpg 600w,
+             images/bridge-in-germany-800.jpg 800w"
+			alt="A bridge in Germany">
 			<ul class="picTitle">
 				<li><h3>Name</h3></li>
 				<li><p>location, location</p></li>
 			</ul>
 		</li>
 		<li>
-			<img src="images/dufflebag.jpg" alt="Dufflebag in the woods">
+			<img src="images/dufflebag.jpg"
+			srcset="images/dufflebag-300.jpg 300w,
+             images/dufflebag-600.jpg 600w,
+             images/dufflebag-800.jpg 800w"
+			alt="Dufflebag in the woods">
 			<ul class="picTitle">
 				<li><h3>Name</h3></li>
 				<li><p>location,location</p></li>
 			</ul>	
 		</li>
-		<!-- <li><img src="images/geyser-iceland.jpg" alt="iceland"></li>
-		<li><img src="images/surfboard-truck.jpg" alt="A truck with a surf board in it."></li>
-		<li><img src="images/golden-gate.jpg" alt="two women in fornt of the golden gate bridge."></li>
-		<li><img src="images/temple-trail.jpg" alt="A trail in a temple."></li>
-		<li><img src="images/compass.jpg" alt="A person holding a compass."></li>
-		<li><img src="images/waterfall-rainbow.jpg" alt="A waterfall with a rainbow."></li> -->
+		<li>
+			<img src="images/geyser-iceland.jpg"
+			srcset="images/geyser-iceland-300.jpg 300w,
+              images/geyser-iceland-600.jpg 600w,
+              images/geyser-iceland-800.jpg 800w"
+			 alt="iceland">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
+		<li>
+			<img src="images/surfboard-truck.jpg" 
+			srcset="images/surfboard-truck-300.jpg 300w,
+             images/surfboard-truck-600.jpg 600w,
+             images/surfboard-truck-800.jpg 800w"
+			alt="A truck with a surf board in it.">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
+		<li>
+			<img src="images/golden-gate.jpg" 
+			srcset="images/golden-gate-300.jpg 300w,
+             images/golden-gate-600.jpg 600w,
+             images/golden-gate-800.jpg 800w"
+			alt="two women in fornt of the golden gate bridge.">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
+		<li>
+			<img src="images/temple-trail.jpg" 
+			srcset="images/temple-trail-300.jpg 300w,
+             images/temple-trail-600.jpg 600w,
+             images/temple-trail-800.jpg 800w"
+			alt="A trail in a temple.">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
+		<li>
+			<img src="images/compass.jpg" 
+			srcset="images/compass-300.jpg 300w,
+             images/compass-600.jpg 600w,
+             images/compass-800.jpg 800w"
+			alt="A person holding a compass.">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
+		<li>
+			<img src="images/waterfall-rainbow.jpg" 
+			srcset="images/waterfall-rainbow-300.jpg 300w,
+             images/waterfall-rainbow-600.jpg 600w,
+             images/waterfall-rainbow-800.jpg 800w"
+			alt="A waterfall with a rainbow.">
+			<ul class="picTitle">
+				<li><h3>Name</h3></li>
+				<li><p>location,location</p></li>
+			</ul>	
+		</li>
 	</ul>
 </section>
-	<footer><p>Images courtesy of unsplash.it</p></footer>
+	<footer>
+		<p>Images courtesy of unsplash.it</p>
+	</footer>
+	<script src="script/main.js"></script>
+
 </body>
 </html>

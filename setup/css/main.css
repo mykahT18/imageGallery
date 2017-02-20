@@ -57,6 +57,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.spin {
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+html {
+  font-family: "Future PT", Georgia, sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+  min-width: 320px; }
+
 body {
   margin: 1rem; }
 
@@ -86,58 +104,56 @@ header {
       justify-content: space-between; }
   .image-list li img {
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
 
 .image-list li {
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   /*! ---------------------------flex basis */
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; }
+      flex-basis: 100%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 1rem 0rem; }
   @media only screen and (min-width: 768px) {
     .image-list li {
       -ms-flex-preferred-size: 49%;
-          flex-basis: 49%; } }
+          flex-basis: 49%;
+      overflow: hidden; }
+      .image-list li:hover .picTitle {
+        bottom: 0;
+        transition: 0.10s;
+        transition-timing-function: ease-out; } }
   @media only screen and (min-width: 1000px) {
     .image-list li {
       -ms-flex-preferred-size: 32%;
-          flex-basis: 32%; } }
+          flex-basis: 32%;
+      overflow: hidden; } }
 
 .picTitle {
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  top: 13.8rem;
   left: 0rem;
   right: 0rem;
-  padding-left: 0.5rem;
-  padding-top: 0.5rem; }
+  padding-left: 0.5rem; }
   .picTitle h3, .picTitle p {
     line-height: 1.2rem; }
-  @media only screen and (min-width: 375px) {
-    .picTitle {
-      top: 16.2rem;
-      left: 0rem;
-      right: 0rem; } }
-  @media only screen and (min-width: 425px) {
-    .picTitle {
-      top: 18.2rem;
-      left: 0rem;
-      right: 0rem; } }
   @media only screen and (min-width: 768px) {
     .picTitle {
-      top: 16.2rem;
-      left: 0rem;
-      right: 0rem; } }
+      bottom: -10rem;
+      position: absolute; } }
+  @media only screen and (min-width: 1000px) {
+    .picTitle {
+      bottom: -10rem;
+      position: absolute; } }
 
 .picTitle h3 {
   background-image: url("../user-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  text-indent: 25px;
-  margin-bottom: 0.2rem; }
+  text-indent: 25px; }
 
 .picTitle p {
   background-image: url("../location.svg");

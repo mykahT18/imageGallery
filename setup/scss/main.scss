@@ -1,8 +1,11 @@
 @import 'base/reset';
-@import 'base/base';
+
 
 @import 'Utilities/mixins';
+@import 'Utilities/animation';
+@import 'Utilities/vars';
 
+@import 'base/base';
 
 header{
 	display: flex;
@@ -28,63 +31,69 @@ header{
 
 	li img{
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    // margin-top: 2rem;
+    // margin-bottom: 1rem;
     flex-basis: 100%;
 		
 	}
 
 }
 .image-list li{
+	display: flex;
 	position: relative;
 	/*! ---------------------------flex basis */
 	flex-basis: 100%;
+	flex-direction: column;
+	margin: 1rem 0rem;
 
 	@include screen(large){
-		flex-basis: 49%;	
+		flex-basis: 49%;
+		overflow: hidden;
+
+		&:hover .picTitle{
+			bottom: 0;
+			
+			transition: 0.10s;
+  			transition-timing-function: ease-out;
+		}
+
 	}
 	@include screen(Xlarge){
-		flex-basis: 32%;	
+		flex-basis: 32%;
+		overflow: hidden;	
 	}
 
 }
 
 .picTitle{
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    top: 13.8rem;
     left: 0rem;
     right: 0rem;
     padding-left: 0.5rem;
-    padding-top: 0.5rem;
+	
 
     h3, p{
     	line-height: 1.2rem;
     }
 
-	@media only screen and (min-width: 375px){
-    	top: 16.2rem;
-    	left: 0rem;
-    	right: 0rem;
-    }
-    @media only screen and (min-width: 425px){
-    	top: 18.2rem;
-    	left: 0rem;
-    	right: 0rem;
-    }	
+
     @include screen(large){
-    	top: 16.2rem;
-    	left: 0rem;
-    	right: 0rem;	
+    	bottom: -10rem;	
+    	position: absolute;
 	}
+	 @include screen(Xlarge){
+    	bottom: -10rem;	
+    	position: absolute;
+	}
+
 }
 .picTitle h3{
 	background-image: url('../user-icon.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
     text-indent: 25px;
-    margin-bottom: 0.2rem;
+   
 }
 .picTitle p{
 	background-image: url('../location.svg');
@@ -92,6 +101,7 @@ header{
 	background-size: contain;
     text-indent: 25px;
     margin-left: 0.2rem;
+    
 }
 
 footer {

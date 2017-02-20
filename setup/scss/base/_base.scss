@@ -5,5 +5,93 @@ html {
   min-width: 320px;
 }
 body{
-	margin: 1rem;
+	margin: 1rem 0rem;
+	line-height: 1.5;
+	// background-color: #D6D6D6;
 }
+
+.images-container{
+	width: 87%;
+	margin: 0rem auto;
+}
+.image-list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	justify-content: space-between;
+
+	li img{
+    width: 100%;		
+	}
+
+}
+.image-list li{
+	display: flex;
+	position: relative;
+	flex-basis: 100%;
+	flex-direction: column;
+	margin: 1rem 0rem;
+
+	@include screen(large){
+		flex-basis: 49%;
+		overflow: hidden;
+
+		&:hover .picTitle{
+			bottom: 0;
+			
+			transition: 0.10s;
+  			transition-timing-function: ease-out;
+		}
+
+	}
+	@include screen(Xlarge){
+		flex-basis: 32%;
+		overflow: hidden;	
+	}
+
+}
+.picTitle{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    left: 0rem;
+    right: 0rem;
+    padding-left: 0.5rem;
+	
+
+    h3, p{
+    	line-height: 1.2rem;
+    }
+
+
+    @include screen(large){
+    	bottom: -10rem;	
+    	position: absolute;
+	}
+	 @include screen(Xlarge){
+    	bottom: -10rem;	
+    	position: absolute;
+	}
+
+}
+.picTitle h3{
+	background-image: url('../user-icon.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+    text-indent: 25px;
+
+    a{
+    	color: #ffffff;
+
+    }
+   
+}
+.picTitle p{
+	background-image: url('../location.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+    text-indent: 23px;
+    margin-left: 0.2rem;
+    
+}
+

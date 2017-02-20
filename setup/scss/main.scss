@@ -1,115 +1,13 @@
 @import 'base/reset';
 
-
+@import 'Utilities/vars';
 @import 'Utilities/mixins';
 @import 'Utilities/animation';
-@import 'Utilities/vars';
+
+@import 'layout/layout';
 
 @import 'base/base';
 
-header{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	h1{
-		margin: 0.5rem;
-		font-weight: bolder;
-		font-size: 1.8rem;
-	}
-	p{
-		text-align: center;
-	}
-}
-
-.image-list {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: 100%;
-	justify-content: space-between;
-
-	li img{
-    width: 100%;
-    // margin-top: 2rem;
-    // margin-bottom: 1rem;
-    flex-basis: 100%;
-		
-	}
-
-}
-.image-list li{
-	display: flex;
-	position: relative;
-	/*! ---------------------------flex basis */
-	flex-basis: 100%;
-	flex-direction: column;
-	margin: 1rem 0rem;
-
-	@include screen(large){
-		flex-basis: 49%;
-		overflow: hidden;
-
-		&:hover .picTitle{
-			bottom: 0;
-			
-			transition: 0.10s;
-  			transition-timing-function: ease-out;
-		}
-
-	}
-	@include screen(Xlarge){
-		flex-basis: 32%;
-		overflow: hidden;	
-	}
-
-}
-
-.picTitle{
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    left: 0rem;
-    right: 0rem;
-    padding-left: 0.5rem;
-	
-
-    h3, p{
-    	line-height: 1.2rem;
-    }
 
 
-    @include screen(large){
-    	bottom: -10rem;	
-    	position: absolute;
-	}
-	 @include screen(Xlarge){
-    	bottom: -10rem;	
-    	position: absolute;
-	}
 
-}
-.picTitle h3{
-	background-image: url('../user-icon.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-    text-indent: 25px;
-   
-}
-.picTitle p{
-	background-image: url('../location.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-    text-indent: 25px;
-    margin-left: 0.2rem;
-    
-}
-
-footer {
-	background-color: #B8D6EC;
-	padding: 1rem;
-	margin-top: 2rem;
-
-	p{
-		text-align: center;
-	}
-}
